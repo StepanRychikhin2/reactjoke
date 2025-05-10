@@ -1,27 +1,27 @@
-h1,h2,h3{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 0;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
+ul {
+	margin: 0;
+	padding: 0;
 }
 
-
-.jokelist{
-    list-style: none;
-    background-color: rgb(255, 255, 255);
+.jokelist {
+	list-style: none;
+	background-color: rgb(255, 255, 255);
 }
 
-
-.itemjoke{
-    width: 700px;
-    height: 150px;
-    background-color: rgb(164, 190, 190);
-   margin-top: 10px;
-   border-radius: 20px;
-   padding: 10px 10px 10px 10px;
+.itemjoke {
+	width: 700px;
+	height: 150px;
+	background-color: rgb(164, 190, 190);
+	margin-top: 10px;
+	border-radius: 20px;
+	padding: 10px 10px 10px 10px;
 }
 
 /* .itemFafjoke{
@@ -32,18 +32,15 @@ ul{
    border-radius: 20px;
 } */
 .main {
-    gap: 20px;
-    display: flex;
+	gap: 20px;
+	display: flex;
 }
 
-
-
-.btnJoke{
-    
-    margin-left: 100px;
-background-color: azure;
-    border: 0;
-    border-radius: 10px;
-    height: 30px;
-    width: 100px;
+.btnJoke {
+	margin-left: 100px;
+	background-color: azure;
+	border: 0;
+	border-radius: 10px;
+	height: 30px;
+	width: 100px;
 }

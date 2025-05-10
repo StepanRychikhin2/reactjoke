@@ -24,7 +24,6 @@ const FaforiteJokeList: React.FC = () => {
 				setFavJokes(response.data)
 			})
 			.catch(function (error) {
-				// обробка помилки
 				console.log(error)
 			})
 	}, [])

@@ -20,22 +20,23 @@ const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
 		punchline: punchline,
 	}
 
-function postToFaforite() {
-    axios.post('https://681e057ac1c291fa6632ae53.mockapi.io/jokes', joke)
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-}
+	function postToFaforite() {
+		axios
+			.post('https://681e057ac1c291fa6632ae53.mockapi.io/jokes', joke)
+			.then(function (response) {
+				console.log(response)
+			})
+			.catch(function (error) {
+				console.log(error)
+			})
+	}
 
 	return (
 		<li className={css.itemjoke} id={id.toString()}>
 			<h2>{setup}</h2>
 			<p>{punchline}</p>
 			<span>id:{id}</span>
-			<button className={css.btnJoke} onClick={(w) =>  postToFaforite()}>
+			<button className={css.btnJoke} onClick={(w) => postToFaforite()}>
 				add to faforite
 			</button>
 		</li>

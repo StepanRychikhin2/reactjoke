@@ -1,6 +1,6 @@
 import Joke from './Joke.tsx'
 import { useEffect, useState } from 'react'
-import css from  "./style.module.css";
+import css from './style.module.css'
 export type JokeSchema = {
 	id: number
 	type?: string
