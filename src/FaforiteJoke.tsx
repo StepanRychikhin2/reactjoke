@@ -17,6 +17,28 @@ type jokeFaf = {
 const FaforiteJokeList: React.FC = () => {
 	const [fafjokes, setFavJokes] = useState<fafJokeLIst[]>([])
 
+
+function deleteJoke(jokeid:number) {
+		axios
+			.delete(`https://681e057ac1c291fa6632ae53.mockapi.io/jokes/${jokeid}`)
+			.then(function (response) {
+				console.log(response)
+			})
+			.catch(function (error) {
+				console.log(error)
+			})
+
+
+			axios
+			.get('https://681e057ac1c291fa6632ae53.mockapi.io/jokes')
+			.then(function (response) {
+				setFavJokes(response.data)
+			})
+			.catch(function (error) {
+				console.log(error)
+			})
+	}
+
 	useEffect(() => {
 		axios
 			.get('https://681e057ac1c291fa6632ae53.mockapi.io/jokes')
@@ -37,6 +59,7 @@ const FaforiteJokeList: React.FC = () => {
 							<h2>{data.setup}</h2>
 							<p>{data.punchline}</p>
 							<span>id:{data.id}</span>
+							<button className={css.btnJoke} onClick={() => deleteJoke(data.id)}>delete</button>
 						</li>
 					)
 				})}

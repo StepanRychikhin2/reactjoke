@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { JokeSchema } from './JokeList'
 import css from './style.module.css'
 import axios from 'axios'
@@ -9,6 +9,8 @@ import axios from 'axios'
 // }
 
 const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
+const [awd, setAwd] = useState<unknown>(null)
+
 	type Joker = {
 		id: number | string
 		setup: string
@@ -24,11 +26,17 @@ const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
 		axios
 			.post('https://681e057ac1c291fa6632ae53.mockapi.io/jokes', joke)
 			.then(function (response) {
+
+				// setAwd(response)
+				window.location.reload(); 
 				console.log(response)
 			})
 			.catch(function (error) {
 				console.log(error)
 			})
+
+
+			
 	}
 
 	return (
