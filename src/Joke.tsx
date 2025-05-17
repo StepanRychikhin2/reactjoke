@@ -2,11 +2,7 @@ import { FC, useState } from 'react'
 import { JokeSchema } from './JokeList'
 import css from './style.module.css'
 import axios from 'axios'
-// interface JokeItemData {
-//   id: number;
-//   setup: string;
-//   punchline: string;
-// }
+
 
 const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
 
@@ -49,4 +45,3 @@ const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
 	)
 }
 export default Joke
-// localStorage.setItem('jokeFaf', joke)
