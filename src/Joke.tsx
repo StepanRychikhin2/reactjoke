@@ -9,7 +9,6 @@ import axios from 'axios'
 // }
 
 const Joke: FC<JokeSchema> = ({ id, setup, punchline }) => {
-const [awd, setAwd] = useState<unknown>(null)
 
 	type Joker = {
 		id: number | string
@@ -27,7 +26,6 @@ const [awd, setAwd] = useState<unknown>(null)
 			.post('https://681e057ac1c291fa6632ae53.mockapi.io/jokes', joke)
 			.then(function (response) {
 
-				// setAwd(response)
 				window.location.reload(); 
 				console.log(response)
 			})
